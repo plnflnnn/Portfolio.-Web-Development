@@ -1,0 +1,69 @@
+.reviews
+    padding: 60px 0 60px 0
+    position: relative
+    &__photo
+        margin: 0 auto
+        img
+            display: block
+            margin: 0 auto
+            width: 100px
+            height: 100px
+    &__title
+        margin-top: 15px
+        font-size: 18px
+        line-height: 22px
+        font-weight: 700
+        color: #3a3a3a
+    &__text 
+        margin-top: 10px
+        width: 550px
+        text-align: center
+        font-size: 14px
+        font-weight: 300
+    &__review
+        margin-top: 20px
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        flex-direction: column
+    &__wrapper
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+    .prev, .next
+            position: absolute
+            top: 38%
+            right: 58%
+            border: none
+            background: none
+            img
+                display: block
+                width: 14px
+                height: 46px
+    .next
+            left: 58%
+    .tns-outer
+        .tns-nav
+            display: none
+        [data-action=stop]
+            display: none
+
+
+
+    // &__wrapper
+    //     position: relative
+    //     z-index: 2
+    //     .slick-prev, .slick-next
+    //         z-index: 4
+    //         position: absolute
+    //         top: 15%
+    //         right: 60%
+    //         border: none
+    //         background: none
+    //         img
+    //             width: 14px
+    //             height: 46px
+    //     .slick-next
+    //         left: 60%
+    //         top: 15%

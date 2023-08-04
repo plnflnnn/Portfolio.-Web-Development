@@ -1,0 +1,10 @@
+.pageup {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    i {
+        color: $main-color;
+        font-size: 40px;
+    }
+}

@@ -1,0 +1,215 @@
+
+.promo
+    min-height: 680px
+    background: url('../img/promo.png') center (center / cover) no-repeat
+    position: relative
+    z-index: 5
+    &__wrapper
+        display: flex
+        margin: 0 auto
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        flex-wrap: wrap
+        p
+            font-size: 24px
+            font-weight: 300
+            color: #ffffff
+            margin: 0
+    &__header
+        margin: 0
+        font-size: 72px
+        font-weight: 700
+        line-height: 1.2
+        text-transform: uppercase
+        color: $main-color
+    &__subheader 
+        font-size: 42px
+        line-height: 1.2
+        font-weight: 400
+        text-transform: uppercase
+        color: #ffffff
+    &__descr
+        display: grid
+        grid-template: auto / repeat(4, auto)
+        place-content: center center
+        margin-bottom: 30px
+        &-item
+            &-icon
+                min-height: 63px
+                margin-bottom: 20px
+                display: flex
+                align-items: center
+                img
+                    display: block
+                    margin: 0 auto
+
+        &-text 
+            margin-top: 0
+            font-size: 16px
+            line-height: 22px
+            font-weight: 300
+            color: #ffffff
+            text-align: center
+
+.divider
+    margin: 0 auto
+    margin-top: 25px
+    margin-bottom: 25px
+    display: flex
+    align-items: center
+    .row
+        display: block
+        height: 1px
+        width: 470px
+        background-color: #ffff
+    span
+        border-radius: 100%
+        width: 8px
+        height: 8px
+        background-color: #ffff
+        margin: 10px
+
+
+.logo
+    width: 96px
+    height: 100px
+    img
+        width: 100%
+    
+.header
+    padding-top: 20px
+    display: flex
+    justify-content: space-between
+    align-items: center 
+    &__contacts
+        display: flex
+        flex-direction: row
+    &__info
+        display: flex
+        justify-content: flex-end
+        align-items: flex-end
+        flex-wrap: wrap
+        flex-direction: column
+        margin-right: 20px
+    &__question
+        font-size: 14px
+        line-height: 24px
+        font-weight: 300
+        color: #ffffff
+    &__phone
+        a
+            font-size: 19px
+            line-height: 24px
+            font-weight: 700
+            color: #ffffff
+
+
+.nav
+    ul 
+        list-style-type: none
+        display: flex
+        justify-content: space-between
+        align-items: center
+        li
+            display: block
+            cursor: pointer
+            border-right: 1px dotted #ffffff
+            padding: 0 12px 0 12px
+            transition: 0.6s all
+            &:last-child
+                border-right: none
+            a
+                font-size: 15px
+                line-height: 16px
+                font-weight: 400
+                color: #ffffff
+                transition: 0.6s all
+                &:active
+                    color: $main-color
+                    text-decoration: none
+
+
+.menu
+    position: fixed
+    left: -100%
+    top: 0
+    visibility: hidden
+    opacity: 0
+    transition: 0.6s all
+    z-index: 10
+    height: 100%
+    background-color: rgba(0,0,0, 0.8)
+    width: 80%
+    &.active 
+        left: 0
+        visibility: visible
+        opacity: 1
+        transition: .5s all
+    &__close
+        position: absolute
+        right: 15px
+        top: 15px
+        cursor: pointer
+        transition: .5s all
+        svg
+            width: 25px
+            height: 25px
+    ul
+        left: -100%
+        padding-top: 170px
+        list-style-type: none
+        align-items: center     
+        li
+            margin-bottom: 40px  
+        a
+            position: relative
+            padding-left: 50px
+            font-size: 22px
+            line-height: 16px
+            font-weight: 400
+            color: #ffffff
+            &:before
+                content: ''
+                position: absolute
+                width: 10px
+                height: 10px
+                border: 1px solid #ffff
+                border-radius: 100%
+                left: 22px
+                top: 4px
+            &:hover
+                color: $main-color
+                text-decoration: none
+    &__info
+        position: absolute
+        display: flex
+        justify-content: flex-end
+        align-items: flex-end
+        flex-wrap: wrap
+        flex-direction: column
+        right: 20px
+        bottom: 70px
+    &__question
+        font-size: 14px
+        line-height: 24px
+        font-weight: 300
+        color: #ffffff
+    &__phone
+        a
+            font-size: 19px
+            line-height: 24px
+            font-weight: 700
+            color: #ffffff
+
+.hamburger
+    display: none
+        
+
+
+
+                        
+
+
+
+

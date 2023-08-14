@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		slideBy: 1,
 		autoplay: false,
 		autoplayHoverPause: true,
-		speed: 2000,
+		speed: 800,
 		mouseDrag: true,
 		controls: false
 	});
@@ -45,9 +45,9 @@ window.addEventListener('DOMContentLoaded', () => {
 		form.addEventListener('submit', (e) => {
 			e.preventDefault();
 			const messages = {
-				loading: 'Загрузка...',
-				success: 'Спасибо! Скоро мы с вами свяжемся!',
-				failure: 'Что-то пошло не так...'
+				loading: 'Loading...',
+				success: 'Thank you! We will contact you soon',
+				failure: 'Something went wrong...'
 			};
 			function showMessage(mess) {
 				const statusMessage = document.createElement('div');
@@ -56,6 +56,7 @@ window.addEventListener('DOMContentLoaded', () => {
 				  text-align: center;
 				  font-weight:  300;
 				  font-size: 16px;
+				  margin-top: 30px;
 				  position: absolute;
 				`;
 				statusMessage.classList.add('statusMessages');
@@ -70,7 +71,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			formData.forEach(function(value, key) {
 				object[key] = value;
 			});
-			fetch('http://localhost:3000/requests', {
+			fetch('db.json', {
 				method: 'POST',
 				body: JSON.stringify(object),
 				headers: {

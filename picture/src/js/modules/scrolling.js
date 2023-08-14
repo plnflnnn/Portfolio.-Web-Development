@@ -40,9 +40,9 @@ const scrolling = (upSelector) => {
             speed;
 
         if (to > from) {
-            speed = 30;
+            speed = 80;
         } else {
-            speed = -30;
+            speed = -80;
         }
         
         let move = setInterval(function() {

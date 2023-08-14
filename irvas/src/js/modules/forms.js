@@ -7,9 +7,9 @@ const forms = (state) => {
     checkNumInputs('input[name="user_phone"]');
 
     const message = {
-        loading: 'Загрузка...',
-        success: 'Спасибо! Скоро мы с вами свяжемся',
-        failure: 'Что-то пошло не так...'
+        loading: 'Loading...',
+        success: 'Thank you! We will contact you soon',
+        failure: 'Something went wrong...'
     };
 
     const postData = async (url, data) => {

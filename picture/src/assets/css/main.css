@@ -1713,10 +1713,11 @@ h4 {
 
   .feedback-heading {
     font-size: 2rem;
+    margin-left: 4rem;
   }
 
   .feedback-text {
-    margin: 1rem 0;
+    margin: 1rem 4rem;
   }
 
   .feedback .button-order {
@@ -1739,6 +1740,10 @@ h4 {
   .calc .button-transparent {
     margin: 4rem auto;
     width: auto;
+  }
+
+  .calc .promocode {
+    margin: 0 auto;
   }
 }
 
@@ -1811,8 +1816,17 @@ h4 {
     float: right;
   }
 
+  .feedback {
+    padding: 5rem 2rem 30rem 2rem;
+  }
+
   .feedback-slider-item {
     padding-bottom: 0;
+  }
+
+  .feedback-block img {
+    margin: 0 auto;
+    display: block;
   }
 
   .feedback-heading {
@@ -1844,6 +1858,14 @@ h4 {
 
   .footer p {
     text-align: center;
+  }
+
+  .calc select {
+    margin-left: 0;
+  }
+
+  .main-slider img {
+    width: 80%;
   }
 }
 
@@ -2000,10 +2022,6 @@ h4 {
     padding: 5rem 0;
   }
 
-  .feedback {
-    padding: 5rem 0;
-  }
-
   .feedback .main-next-btn {
     right: -1rem;
   }
@@ -2030,6 +2048,11 @@ h4 {
     padding: 1rem;
   }
 
+  .calc .promocode {
+    margin: 0;
+    margin-left: 1rem;
+  }
+
   .calc-price {
     margin-top: 2rem;
   }
@@ -2052,6 +2075,10 @@ h4 {
   .popup-content {
     padding: 3rem 3rem;
     width: 25rem;
+  }
+
+  .feedback-block img {
+    width: 80%;
   }
 }
 

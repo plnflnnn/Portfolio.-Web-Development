@@ -77,11 +77,11 @@ $(document).ready(function(){
 				}
 			},
 			messages: {
-				name: 'Пожалуйста, введите свое имя',
-				phone: 'Пожалуйста, введите свой номер телефона',
+				name: 'Please specify your name',
+				phone: 'Please enter your phone number',
 				email: {
-					required: 'Пожалуйста, введите свой почтовый адрес',
-					email: 'Неправильно введен почтовый адрес'
+					required: 'We need your email address to contact you',
+					email: 'Invalid email'
 				}
 			}
 		});

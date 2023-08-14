@@ -93,6 +93,9 @@
                 right: 50%;
                 transform: translateX(50%);
             }
+            &__wrapper {
+                width: calc(200% + 60px);
+            }
         }
     }
     .reviews {
@@ -164,13 +167,14 @@
         }
     }
     .promo {
-        padding: 21px 0 0 0;
+        padding: 21px 0 30px 0;
         &__wrapper {
             justify-content: center;
             align-items: center;
         }
         &__header {
             font-size: 40px;
+            text-align: center;
         }
         &__subheader {
             font-size: 20px;

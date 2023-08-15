@@ -4468,13 +4468,21 @@ var accordion = function accordion(triggerSelector, itemsSelector) {
   blocks.forEach(function (block) {
     block.classList.add('animated', 'fadeInDown');
   });
+
+  var removeActiveBtn = function removeActiveBtn() {
+    btns.forEach(function (btn) {
+      btn.classList.remove('active', 'active-style');
+    });
+  };
+
   btns.forEach(function (btn) {
     btn.addEventListener('click', function () {
       if (!this.classList.contains('active')) {
-        btns.forEach(function (btn) {
-          btn.classList.remove('active', 'active-style');
-        });
+        removeActiveBtn();
         this.classList.add('active', 'active-style');
+      } else {
+        this.classList.remove('active', 'active-style');
+        removeActiveBtn();
       }
     });
   });

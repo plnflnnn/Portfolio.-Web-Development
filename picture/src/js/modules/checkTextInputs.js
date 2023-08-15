@@ -6,7 +6,7 @@ const checkTextInputs = (selector) => {
         input.setAttribute('autocomplete', 'disabled');
 
         input.addEventListener('keypress', function(e) {
-            if(e.key.match(/[^а-яё 0-9]/ig)) {
+            if(e.key.match(/[^a-z 0-9]/ig)) {
                 e.preventDefault();
             }
         });

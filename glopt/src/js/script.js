@@ -45,7 +45,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		form.addEventListener('submit', (e) => {
 			e.preventDefault();
 			const messages = {
-				loading: 'Loading...',
 				success: 'Thank you! We will contact you soon',
 				failure: 'Something went wrong...'
 			};
@@ -58,6 +57,9 @@ window.addEventListener('DOMContentLoaded', () => {
 				  font-size: 16px;
 				  margin-top: 30px;
 				  position: absolute;
+				  left: 0;
+				  right: 0;
+				  color: #25333c;
 				`;
 				statusMessage.classList.add('statusMessages');
 				statusMessage.textContent = mess;
@@ -71,6 +73,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			formData.forEach(function(value, key) {
 				object[key] = value;
 			});
+			
 			fetch('db.json', {
 				method: 'POST',
 				body: JSON.stringify(object),

@@ -17643,7 +17643,7 @@ window.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
   var modalState = {};
-  var deadline = '2023-10-01';
+  var deadline = '2024-01-01';
   Object(_modules_changeModalState__WEBPACK_IMPORTED_MODULE_4__["default"])(modalState);
   Object(_modules_modals__WEBPACK_IMPORTED_MODULE_1__["default"])();
   Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_2__["default"])('.glazing_slider ', '.glazing_block', '.glazing_content', 'active');

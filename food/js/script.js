@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	const modalTimerId = setTimeout(() => openModal('.modal', modalTimerId), 50000);
 	tabs('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
 	modal('[data-modal]', '.modal', modalTimerId);
-	timer('.timer', '2023-10-01');
+	timer('.timer', '2024-01-01');
 	slider({
 		container: '.offer__slider',
 		nextArrow: '.offer__slider-next',

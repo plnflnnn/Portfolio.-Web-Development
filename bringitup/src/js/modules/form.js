@@ -118,7 +118,7 @@ export default class Form {
                         this.clearInputs();
                         setTimeout(() => {
                             statusMessage.remove();
-                        }, 6000);
+                        }, 4000);
                     });
             });
         });

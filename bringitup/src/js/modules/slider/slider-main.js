@@ -28,9 +28,8 @@ export default class MainSlider extends Slider {
             }
         } catch(e) {}
 
-
-        this.slides.forEach(slide => {
-            slide.style.display = 'none';
+        Array.prototype.forEach.call(this.slides, slide => {
+            slide.style.display = 'none'; 
         });
 
         this.slides[this.slideIndex - 1].style.display = 'block';
@@ -46,12 +45,20 @@ export default class MainSlider extends Slider {
                 this.plusSlides(1);
             });
 
-            item.parentNode.previousElementSibling.addEventListener('click', (e) => {
+            item.parentNode.previousElementSibling.addEventListener('click', () => {
                 e.preventDefault();
                 this.slideIndex = 1;
                 this.showSlides(this.slideIndex);
             });
         });
+
+        if (this.prev) {
+            this.prev.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    this.plusSlides(-1);
+                });
+            })
+        }
 
         function stopPropagation(selector, n) {
             document.querySelectorAll(selector).forEach(item => {

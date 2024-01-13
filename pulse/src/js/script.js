@@ -1,4 +1,21 @@
+import $ from 'jquery';
+import 'slick-carousel';
+import 'jquery-validation';
+import 'jquery-mask-plugin';
+import WOW from 'wow.js';
+
 $(document).ready(function(){
+	new WOW().init();
+	
+	function loadScript(src) {
+		const script = document.createElement('script');
+		script.src = src;
+		script.async = false;
+		document.body.appendChild(script);
+	};
+
+	loadScript('https://kit.fontawesome.com/e1bf98aa6f.js');
+
 	$('.carousel_inner').slick(
 		{
 			speed: 1500,
@@ -93,7 +110,7 @@ $(document).ready(function(){
 	validateForms('#order form');
 
 
-	$('input[name=phone]').mask('+7 (999) 999-99-99');
+	$('input[name=phone]').mask('+1 999-999-9999');
 
 
 	$('form').submit(function(e){
@@ -128,12 +145,9 @@ $(document).ready(function(){
 		}
 	});
 
-	$('a[href^=#up]'). click(function () {
+	$("a[href^='#up']").click(function () {
 		const _href = $(this).attr('href');
 		$('html, body').animate({scrollTop: $(_href).offset().top+'px'}) ;
 		return false;
 	});
-
-
-	new WOW().init();
 });

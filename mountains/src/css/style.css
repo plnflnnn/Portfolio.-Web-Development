@@ -12,7 +12,7 @@
 
 .main {
     background: url(../img/main.png) no-repeat 36%/cover;
-    height: 875px;
+    min-height: 900px;
     width: 100%;
     object-fit: cover;
 }
@@ -57,7 +57,8 @@
 
 .history {
     background: url(../img/history.png) center center/cover no-repeat;
-    height: 875px;
+    /* min-height: 100vh; */
+    min-height: 900px;
     width: 100%;
     position: relative;
 }
@@ -159,6 +160,7 @@
 
 .climb {
     position: relative;
+    min-height: 900px;
 }
 
 .climb_descr {
@@ -256,11 +258,11 @@
 .tabs_content {
     display: none;
     padding-top: 100px;
-    padding-bottom: 180px;
 }
 
 .tabs_content.active {
     display: block;
+    padding-bottom: 180px;
 }
 
 .tab_content_wrapper {
@@ -331,7 +333,7 @@
 }
 
 footer {
-    height: 74px;
+    min-height: 74px;
     background-color: #414f6b;
 }
 
@@ -396,7 +398,6 @@ p {
 @media (max-width: 767px) {
     .main {
         background: url(../img/main.png) no-repeat 41%/cover;
-        height: 90vh;
     }
 
     .logo_title,
@@ -429,12 +430,14 @@ p {
 
 @media(max-width: 710px) {    
     .main {
-        height: 92vh;
         width: 100%;
         position: relative;
         background: none;
+        height: 100vh;
     }
-    
+    .history {
+        min-height: 850px;
+    }
     .main_header {
         position: absolute;
         top: 0;
@@ -451,19 +454,6 @@ p {
 }
 
 @media (max-width: 576px) {
-    .main {
-        height: 92vh;
-    }
-    .history {
-        height: 92vh;
-    }
-
-    .climb {
-        height: 92vh;
-    }
-    .history {
-        min-height: 600px;
-    }
     .logo_title {
         font-size: 12.2px;
         margin-top: 20px;

@@ -91,35 +91,45 @@ export default class Form {
         this.initMask();
 
         this.forms.forEach(item => {
+            const formInputs = item.querySelectorAll('input');
             item.addEventListener('submit', (e) => {
                 e.preventDefault();
 
-                let statusMessage = document.createElement('div');
-                statusMessage.style.cssText = `
-                    margin-top: 15px;
-                    font-size: 18px;
-                    color: grey;
-                `;
-                item.parentNode.appendChild(statusMessage);
+                let isEmpty;
 
-                statusMessage.textContent = this.message.loading;
+                formInputs.forEach(input => {
+                    if(input.value.length == 0) {
+                        isEmpty = true;
+                    }
+                });
 
-                const formData = new FormData(item);
-
-                this.postData(this.path, formData)
-                    .then(res => {
-                        console.log(res);
-                        statusMessage.textContent = this.message.success;
-                    })
-                    .catch(() => {
-                        statusMessage.textContent = this.message.failure;
-                    })
-                    .finally(() => {
-                        this.clearInputs();
-                        setTimeout(() => {
-                            statusMessage.remove();
-                        }, 4000);
-                    });
+                if(!isEmpty) {
+                    let statusMessage = document.createElement('div');
+                    statusMessage.style.cssText = `
+                        margin-top: 15px;
+                        font-size: 18px;
+                        color: grey;
+                    `;
+                    item.parentNode.appendChild(statusMessage);
+    
+                    statusMessage.textContent = this.message.loading;
+    
+                    const formData = new FormData(item);
+    
+                    this.postData(this.path, formData)
+                        .then(res => {
+                            statusMessage.textContent = this.message.success;
+                        })
+                        .catch(() => {
+                            statusMessage.textContent = this.message.failure;
+                        })
+                        .finally(() => {
+                            this.clearInputs();
+                            setTimeout(() => {
+                                statusMessage.remove();
+                            }, 4000);
+                        });
+                }
             });
         });
     }

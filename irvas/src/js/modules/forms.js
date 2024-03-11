@@ -46,7 +46,6 @@ const forms = (state) => {
 
             postData('assets/server.php', formData)
                 .then(res => {
-                    console.log(res);
                     statusMessage.textContent = message.success;
                     setTimeout(() => {
                         item.closest('div[data-modal]').style.display = 'none';
